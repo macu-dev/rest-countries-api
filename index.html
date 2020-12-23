@@ -3,15 +3,91 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Where in the world?</title>
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header class="header p-4 shadow">
+    <div class="container p-0 d-flex flex-wrap justify-content-between header__container">
+      <h1 class="mb-0 header__title">Where in the world?</h1>
+      <button class="header__button"><i class="far fa-moon mr-1"></i> Dark Mode</button>
+    </div>
+  </header>
+  <main class="main container p-0 w-100">
+    <form class="form mt-5 d-flex flex-wrap form__container justify-content-between">
+      <fieldset class="input-group form__container">
+        <div class="input-group-prepend">
+          <button class="input-group-text shadow-sm" type="submit" id="search">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <input type="text" class="form-control shadow-sm form__input" placeholder="Search for a country" aria-label="Search for a country">
+      </fieldset>
+      <fieldset class="form__container d-flex justify-content-end">
+        <select class="custom-select form__select" id="inputGroupSelect01">
+          <option selected>Filter by Region</option>
+          <option value="AFR">Africa</option>
+          <option value="AMER">Americas</option>
+          <option value="AS">Asia</option>
+          <option value="EUR">Europe</option>
+          <option value="OCEA">Oceania</option>
+        </select>
+      </fieldset>
+    </form>
 
+    <div class="row mt-5">
+    <div class="col-3">
+      <article class="card shadow w-100">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <header class="card-body">
+          <h2 class="card-title">Card title</h2>
+          <p class="card-text">Population: <span></span></p>
+          <p class="card-text">Region: <span></span></p>
+          <p class="card-text">Capital: <span></span></p>
+        </header>
+      </article>
+    </div>
 
-  
+    <div class="col-3">
+      <article class="card shadow w-100">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <header class="card-body">
+          <h2 class="card-title">Card title</h2>
+          <p class="card-text">Population: <span></span></p>
+          <p class="card-text">Region: <span></span></p>
+          <p class="card-text">Capital: <span></span></p>
+        </header>
+      </article>
+    </div>
+
+    <div class="col-3">
+      <article class="card shadow w-100">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <header class="card-body">
+          <h2 class="card-title">Card title</h2>
+          <p class="card-text">Population: <span></span></p>
+          <p class="card-text">Region: <span></span></p>
+          <p class="card-text">Capital: <span></span></p>
+        </header>
+      </article>
+    </div>
+
+    <div class="col-3">
+      <article class="card shadow w-100">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <header class="card-body">
+          <h2 class="card-title">Card title</h2>
+          <p class="card-text">Population: <span></span></p>
+          <p class="card-text">Region: <span></span></p>
+          <p class="card-text">Capital: <span></span></p>
+        </header>
+      </article>
+    </div>
+  </div>
+</main>
 </body>
 </html>
