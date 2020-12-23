@@ -1,0 +1,25 @@
+{
+  "name": "rest-countries-api",
+  "version": "1.0.0",
+  "description": "App para buscar banderas de paises",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macu-dev/rest-countries-api.git"
+  },
+  "author": "Maria Claudia Pérez Escalante",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/macu-dev/rest-countries-api/issues"
+  },
+  "homepage": "https://github.com/macu-dev/rest-countries-api#readme",
+  "devDependencies": {
+    "bootstrap": "^4.5.3"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.1"
+  }
+}
