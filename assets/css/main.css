@@ -35,6 +35,10 @@ body{
   font-weight:var(--semiBold);
 }
 
+button:focus{
+  outline:none !important;
+}
+
 
 /* input */
 .form__input {
@@ -45,7 +49,13 @@ body{
 
 .form__select {
   width: 35%;
+  -moz-appearance:none; /* Firefox */
+  -webkit-appearance:none; /* Safari and Chrome */
+  appearance:none;
+  /* background: transparent; */
+  background: #fff url("../img/icons8-expand-arrow-26.png") no-repeat right .75rem center/10px 10px;
 }
+
 
 .form__container {
   flex: 1 1 50%;
