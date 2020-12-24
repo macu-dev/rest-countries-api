@@ -39,7 +39,6 @@ button:focus{
   outline:none !important;
 }
 
-
 /* input */
 .form__input {
   width: 60%!important;
@@ -56,12 +55,24 @@ button:focus{
   background: #fff url("../img/icons8-expand-arrow-26.png") no-repeat right .75rem center/10px 10px;
 }
 
-
 .form__container {
   flex: 1 1 50%;
 }
 .input-group-text{
   background-color: transparent;
   border: none;
+}
+
+.card-img-top {
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: var(--extraBold);
+}
+.card {
+  height: 380px;
 }
 
