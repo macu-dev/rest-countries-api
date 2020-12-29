@@ -9,11 +9,12 @@
   <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.css">
 </head>
 <body>
   <header class="header p-4 shadow">
     <div class="container p-0 d-flex flex-wrap justify-content-between header__container">
-      <h1 class="mb-0 header__title">Where in the world?</h1>
+      <h1 class="mb-0 header__title"><a href="index.html" class="header__item">Where in the world?</a></h1>
       <button class="header__button" id="mode-dark"><i class="far fa-moon mr-1"></i> Dark Mode</button>
     </div>
   </header>
@@ -25,7 +26,7 @@
             <i class="fas fa-search"></i>
           </button>
         </div>
-        <input type="text" class="form-control shadow-sm form__input" placeholder="Search for a country" aria-label="Search for a country">
+        <input type="text" class="form-control shadow-sm form__input" placeholder="Search for a country" aria-label="Search for a country" id="search-country">
       </fieldset>
       <fieldset class="form__container d-flex justify-content-end">
         <select class="custom-select form__select p-1" id="inputGroupSelect01">
@@ -40,6 +41,6 @@
     </form>
     <section id="countries" class="w-100"></section>
   </main>
-<script src="assets/js/app.js"></script>
+<script type="module" src="assets/js/app.js"></script>
 </body>
 </html>

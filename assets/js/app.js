@@ -1,6 +1,9 @@
+import Swal from '/node_modules/sweetalert2/src/sweetalert2.js'
+
 document.addEventListener("DOMContentLoaded", initApp);
 const section = document.getElementById("countries");
-
+const form = document.querySelector("form");
+form.addEventListener('submit', validation);
 
 function initApp() {
   getCountries();
@@ -8,7 +11,7 @@ function initApp() {
 
 async function getCountries() {
   try {
-    const resp = await fetch('https://restcountries.eu/rest/v2/all');
+    const resp = await fetch(`https://restcountries.eu/rest/v2/all`);
     const countries = await resp.json(); 
     section.innerHTML = drawCountries(countries);
     
@@ -21,7 +24,9 @@ function drawCard ({name,population,region,capital,flag}) {
   return `
     <div class="col-3">
       <article class="card shadow w-100">
-        <img class="card-img-top" src="${flag}" alt="Card image of ${name}">
+        <figure class="w-100 mb-0 card__item">
+          <img class="card-img-top h-100" src="${flag}" alt="Card image of ${name}">
+        </figure>
         <header class="card-body">
           <h2 class="card-title">${name}</h2>
           <p class="card-text">Population: <span>${population}</span></p>
@@ -47,6 +52,52 @@ function drawCountries(countries) {
 
   return template;
 }
+function validation(e) {
+  e.preventDefault();
+  const nameCountry = document.getElementById("search-country").value;
+  const isNumber = /^[0-9]+$/;
+  const isString = /^[A-Z]+$/i;
+  let isValid = true;
+
+  if(isNumber.test(nameCountry) || !isString.test(nameCountry)) {
+    Swal.fire({
+      icon: 'error',
+      title: 'Oops...',
+      text: 'Error en el llenado, por favor vuelva a ingresar'
+    })
+
+    form.reset();
+    isValid = false;
+  }
+
+  if(nameCountry === '') {
+    getCountries();
+    isValid = false;
+  }
+
+  if(isValid) {
+    displayMatches(nameCountry);
+  }
+  
+}
+
+async function displayMatches(country) {
+  try {
+    const resp = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
+    const matches = await resp.json(); 
+    if(matches.status == 404) {
+      const errorMessage = `<h2 class="text-center">No se encontraron resultados</h2>`;
+      section.innerHTML = errorMessage; 
+    }else{
+      section.innerHTML = drawCountries(matches);
+    }
+    
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+
 
 
 

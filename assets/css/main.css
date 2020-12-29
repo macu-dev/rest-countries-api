@@ -35,6 +35,11 @@ body{
   font-weight:var(--semiBold);
 }
 
+.header__item, .header__item:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 button:focus{
   outline:none !important;
 }
@@ -63,9 +68,12 @@ button:focus{
   border: none;
 }
 
-.card-img-top {
+.card__item {
   height: 170px;
-  object-fit: cover;
+}
+
+.card-img-top {
+ object-fit: cover;
 }
 
 .card-title {
@@ -73,6 +81,6 @@ button:focus{
   font-weight: var(--extraBold);
 }
 .card {
-  height: 380px;
+  height: 400px;
 }
 
