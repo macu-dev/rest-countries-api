@@ -86,7 +86,7 @@ async function displayMatches(country) {
     const resp = await fetch(`https://restcountries.eu/rest/v2/name/${country}`);
     const matches = await resp.json(); 
     if(matches.status == 404) {
-      const errorMessage = `<h2 class="text-center">No se encontraron resultados</h2>`;
+      const errorMessage = `<h2 class="text-center message-error">No se encontraron resultados</h2>`;
       section.innerHTML = errorMessage; 
     }else{
       section.innerHTML = drawCountries(matches);

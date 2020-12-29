@@ -44,6 +44,9 @@ button:focus{
   outline:none !important;
 }
 
+main {
+  height: 100vh;
+}
 /* input */
 .form__input {
   width: 60%!important;
@@ -84,3 +87,6 @@ button:focus{
   height: 400px;
 }
 
+.message-error {
+  margin-top: 140px;
+}
