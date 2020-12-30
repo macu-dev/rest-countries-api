@@ -3,15 +3,24 @@ import Swal from '/node_modules/sweetalert2/src/sweetalert2.js'
 document.addEventListener("DOMContentLoaded", initApp);
 const section = document.getElementById("countries");
 const form = document.querySelector("form");
+const options = document.getElementById("options-region");
 form.addEventListener('submit', validation);
+options.addEventListener('change', (e) => {
+  if(e.target.value == 'Filter by Region') {
+    initApp();
+  }else {
+    getCountries(`https://restcountries.eu/rest/v2/region/${e.target.value}`);
+  }
+})
+
 
 function initApp() {
-  getCountries();
+  getCountries("https://restcountries.eu/rest/v2/all");
 }
 
-async function getCountries() {
+async function getCountries(path) {
   try {
-    const resp = await fetch(`https://restcountries.eu/rest/v2/all`);
+    const resp = await fetch(path);
     const countries = await resp.json(); 
     section.innerHTML = drawCountries(countries);
     
@@ -71,7 +80,7 @@ function validation(e) {
   }
 
   if(nameCountry === '') {
-    getCountries();
+    initApp();
     isValid = false;
   }
 
