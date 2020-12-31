@@ -3,6 +3,7 @@
   --light: 300;
   --semiBold:600;
   --extraBold:800;
+  --DarkGray: hsl(0, 0%, 52%);
 }
 
 
@@ -47,6 +48,8 @@ button:focus{
 main {
   height: 100vh;
 }
+
+
 /* input */
 .form__input {
   width: 60%!important;
@@ -71,9 +74,31 @@ main {
   border: none;
 }
 
+
+/* card-country */
+
 .card__item {
   height: 170px;
 }
+
+.card__link {
+  text-decoration: none;
+  color: black;
+}
+
+.card__link:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.card-text {
+  font-weight: var(--semiBold);
+}
+
+.card-text span {
+  font-weight: 400;
+}
+
 
 .card-img-top {
  object-fit: cover;
@@ -87,6 +112,15 @@ main {
   height: 400px;
 }
 
+
+
+/* error input */
 .message-error {
   margin-top: 140px;
+}
+
+
+/* section */ 
+.countries__column {
+  align-content:baseline;
 }
