@@ -124,3 +124,7 @@ main {
 .countries__column {
   align-content:baseline;
 }
+
+.col__section {
+  padding-left: 80px;
+}

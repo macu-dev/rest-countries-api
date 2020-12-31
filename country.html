@@ -19,36 +19,21 @@
   </header>
 
   <main class="main container p-0 w-100 d-flex align-items-center">
-    <section id="countries" class="w-100 h-75 row ml-0 mr-0 countries">
-      <div class="col-6 h-75">
-
-        <button><i class="fas fa-long-arrow-alt-left"></i>Back</button>
-        <figure>
-          <img src="" alt="">
+    <section id="countries" class="w-100 h-75 row ml-0 mr-0 countries d-flex justify-content-between">
+      <div class="col-6 h-75 d-flex flex-wrap">
+        <div>
+          <button><i class="fas fa-long-arrow-alt-left"></i>Back</button>
+        </div>
+        <figure class="mb-0">
+          <img id="countryImg" class="w-100" src="" alt="">
         </figure>
       </div>
 
-      <div class="col-6 row d-flex align-content-center h-75">
-        <h2 class="w-100">Belgium</h2>
-
-        <div class="col-6">
-          <p>Native Name: <span></span></p>
-          <p>Population: <span></span></p>
-          <p>Region: <span></span></p>
-          <p>Sub Region: <span></span></p>
-          <p>Capital: <span></span></p>
-        </div>
-
-        <div class="col-6">
-          <p>Top Level Domain: <span></span></p>
-          <p>Currencies: <span></span></p>
-          <p>Languages: <span></span></p>
-        </div>
-
-        <div class="w-100">
-          <p>Border Country: <a></a> </p>
-        </div>
+      <div id="countryData" class="col-6 row d-flex align-content-center h-75 col__section">
+        <p>Loading...</p>
       </div>
     </section>
   </main>
+  <script type="module" src="assets/js/country.js"></script>
+
 </body>

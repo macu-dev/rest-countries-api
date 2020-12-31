@@ -5,6 +5,7 @@ const section = document.getElementById("countries");
 const form = document.querySelector("form");
 const options = document.getElementById("options-region");
 form.addEventListener('submit', validation);
+
 options.addEventListener('change', (e) => {
   if(e.target.value == 'Filter by Region') {
     initApp();
@@ -12,7 +13,6 @@ options.addEventListener('change', (e) => {
     getCountries(`https://restcountries.eu/rest/v2/region/${e.target.value}`);
   }
 })
-
 
 function initApp() {
   getCountries("https://restcountries.eu/rest/v2/all");
@@ -31,7 +31,7 @@ async function getCountries(path) {
 
 function drawCard ({name,population,region,capital,flag}) {
   return `
-    <a class="col-3 card__link" href="javascript">
+    <a class="col-3 card__link" href="country.html?${name}">
       <article class="card shadow w-100">
         <figure class="w-100 mb-0 card__item">
           <img class="card-img-top h-100" src="${flag}" alt="Card image of ${name}">
