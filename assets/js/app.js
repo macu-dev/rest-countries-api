@@ -31,7 +31,7 @@ async function getCountries(path) {
 
 function drawCard ({name,population,region,capital,flag}) {
   return `
-    <div class="col-3">
+    <a class="col-3 card__link" href="javascript">
       <article class="card shadow w-100">
         <figure class="w-100 mb-0 card__item">
           <img class="card-img-top h-100" src="${flag}" alt="Card image of ${name}">
@@ -43,7 +43,7 @@ function drawCard ({name,population,region,capital,flag}) {
           <p class="card-text">Capital: <span>${capital}</span></p>
         </header>
       </article>
-    </div>
+    </a>
   `;  
 }
 
