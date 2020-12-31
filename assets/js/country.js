@@ -1,0 +1,1 @@
+const section_country = document.querySelector("#countries");
