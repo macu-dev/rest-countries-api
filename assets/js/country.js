@@ -16,7 +16,9 @@ async function getData(path) {
 let app = window.app;
 
 app.init = function() {
+  const snipper = document.querySelector(".sk-fading-circle");
   app.loadData();
+  snipper.style.display = "none";
 };
 
 app.template = function({name, population, nativeName}) {
@@ -24,17 +26,17 @@ app.template = function({name, population, nativeName}) {
   <h2 class="w-100">${name}</h2>
 
   <div class="col-6 pl-0">
-    <p>Native Name: <span>${nativeName}</span></p>
-    <p>Population: <span>${population}</span></p>
-    <p>Region: <span></span></p>
-    <p>Sub Region: <span></span></p>
-    <p>Capital: <span></span></p>
+    <p class="card-text">Native Name: <span>${nativeName}</span></p>
+    <p class="card-text">Population: <span>${population}</span></p>
+    <p class="card-text">Region: <span></span></p>
+    <p class="card-text">Sub Region: <span></span></p>
+    <p class="card-text">Capital: <span></span></p>
   </div>
 
   <div class="col-6">
-    <p>Top Level Domain: <span></span></p>
-    <p>Currencies: <span></span></p>
-    <p>Languages: <span></span></p>
+    <p class="card-text">Top Level Domain: <span></span></p>
+    <p class="card-text">Currencies: <span></span></p>
+    <p class="card-text">Languages: <span></span></p>
   </div>
 
   <div class="w-100">

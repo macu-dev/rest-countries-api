@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", initApp);
 const section = document.getElementById("countries");
 const form = document.querySelector("form");
 const options = document.getElementById("options-region");
+const snipper = document.querySelector(".sk-fading-circle");
 form.addEventListener('submit', validation);
 
 options.addEventListener('change', (e) => {
@@ -21,7 +22,8 @@ function initApp() {
 async function getCountries(path) {
   try {
     const resp = await fetch(path);
-    const countries = await resp.json(); 
+    const countries = await resp.json();
+    snipper.style.display = "none";
     section.innerHTML = drawCountries(countries);
     
   } catch (error) {
