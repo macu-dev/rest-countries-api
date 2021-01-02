@@ -22,12 +22,12 @@
 
   <main class="main container p-0 w-100 d-flex align-items-center">
     <section id="countries" class="w-100 h-75 row ml-0 mr-0 countries d-flex justify-content-between">
-      <div class="col-6 h-75 d-flex flex-wrap">
-        <div class="w-100">
-          <button onclick="window.location.href='index.html'"><i class="fas fa-long-arrow-alt-left"></i>Back</button>
+      <div class="col-6 d-flex flex-wrap column__countries">
+        <div class="w-100 mb-3 align-self-baseline">
+          <button onclick="window.location.href='index.html'" class="rounded shadow-sm button__section"><i class="fas fa-long-arrow-alt-left mr-1"></i>Back</button>
         </div>
-        <figure class="mb-0">
-          <img id="countryImg" class="w-100 shadow-lg">
+        <figure class="mb-0 figure__countries">
+          <img id="countryImg" class="w-100 shadow-lg h-100">
         </figure>
       </div>
 
@@ -47,7 +47,7 @@
         <div class="sk-circle12 sk-circle"></div>
       </div>
 
-      <div id="countryData" class="col-6 row d-flex align-content-center h-75 col__section"></div>
+      <div id="countryData" class="col-6 row d-flex align-content-center col__section"></div>
     </section>
   </main>
   <script type="module" src="assets/js/country.js"></script>

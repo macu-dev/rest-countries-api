@@ -33,7 +33,7 @@ async function getCountries(path) {
 
 function drawCard ({name,population,region,capital,flag}) {
   return `
-    <a class="col-3 card__link" href="country.html?${name}">
+    <a class="col-lg-3 col-xl-3 col-md-6 col-sm-6 col-12 card__link" href="country.html?${name}">
       <article class="card shadow w-100">
         <figure class="w-100 mb-0 card__item">
           <img class="card-img-top h-100" src="${flag}" alt="Card image of ${name}">
@@ -53,7 +53,7 @@ function drawCountries(countries) {
   let template ='';
 
   for (let i=0; i<countries.length/4; i++){
-    template+= `<div class="row mt-5">`;
+    template+= `<div class="row mt-5 colum-flagCard">`;
    
    for(let j=0; 4*i+j< countries.length && j< 4; j++){
      template+= drawCard(countries[4*i+j]);

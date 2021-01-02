@@ -133,6 +133,12 @@ main {
   padding-left: 80px;
 }
 
+.button__section {
+  background-color: transparent;
+  border:none;
+  padding: .9rem .8rem;
+}
+
 /* snipper css */
 .sk-fading-circle {
   margin: 100px auto;
@@ -272,4 +278,44 @@ main {
 @keyframes sk-circleFadeDelay {
   0%, 39%, 100% { opacity: 0; }
   40% { opacity: 1; } 
+}
+
+/* countries */
+
+.column__countries {
+  height: 80%;
+}
+
+.figure__countries {
+  height: 340px;
+}
+
+.figure__countries img {
+  object-fit: cover;
+}
+
+
+/* mediaqueries */ 
+
+@media (max-width:991px){
+  /* .form__container {
+    flex: 1 1 100%;
+    justify-content:start !important;
+  }
+
+  .form__input {
+    width: 94% !important;
+  } */
+
+  .card__link {
+    margin-bottom: 1.5rem;
+  }
+
+  .card__item {
+    height: 200px;
+  }
+
+  .colum-flagCard{
+    margin-top: 0 !important;
+  }
 }

@@ -40,7 +40,7 @@ app.template = async function({name, population, nativeName, region, subregion, 
   </div>
 
   <div class="w-100 mb-0 mt-5">
-    <p class="font-weight-bold">Border Country: ${(await app.makeButtons(borders)).join("")} </p>
+    <p class="font-weight-bold w-100 d-flex align-items-center flex-wrap mr-3">Border Country: ${(await app.makeButtons(borders)).join("")} </p>
   </div>`;
 }
 
@@ -56,7 +56,7 @@ app.makeButtons = async function(borderCountries) {
   return Promise.all(borderCountries
     .map( async element => {
       const url = `country.html?${await app.parseCodeName(element)}`;
-      return  `<a role="button" href="${url}">${element}</a>`;
+      return  `<a role="button" href="${url}" class="shadow-lg d-inline-flex p-2 text-center rounded m-1">${element}</a>`;
     })
   )
 };
